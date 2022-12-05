@@ -5,39 +5,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Dali // Web Developer</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <!-- main logo / nav -->
   <header>
-    <h1>Lernantino</h1>
+    <h1>Dali Han</h1>
     <nav>
+      <a href="#about">About Me</a>
+      <a href="#work">Works</a>
+      <a href="#contact">Contact Me</a>
     </nav>
   </header>
 
   <!-- hero banner -->
   <section class="hero-banner">
     <div>
-      <h2>Cool subtitle here!</h2>
+      <h2>Explore the world!</h2>
     </div>
   </section>
 
   <main class="page-wrapper">
     <!-- about me -->
     <section class="page-section" id="about">
-      <h2>About Me</h2>
+      <h2 id="about-me" class="col-section-heading">About Me</h2>
+      <div id="personal-intro" class="col-detailed-info">
+        <p>Hi there, I'm Dali. I'm from China, and I live and work in the UK right now. Currently, I'm trying to learn Front-end webdevelopment systematically in BootCamp.</p>
+        <p>Here on this page, you will see all the works I've been working on and to know a little bit more about me. If you have any questions or you want to talk to me, please go to <strong>Contact Me</strong> section.</p>
+        <p>Here on this page, you will see all the works I've been working on and to know a little bit more about me. If you have any questions or you want to talk to me, please go to <strong>Contact Me</strong> section.</p>
+      </div>
     </section>
 
     <!-- portfolio container -->
     <section class="page-section" id="work">
-      <h2>Work</h2>
+      <h2 id="myworks" class="col-section-heading">Works</h2>
+      <section id="workGrid" class="col-detailed-info">
+        <div id="surf" class="workGridCell">
+          <div class="cellTitle">
+            <h4>Surf Rport</h4>
+            <h5>MERN Stack</h5>
+          </div>
+        </div>
+        <div id="led" class="workGridCell">
+          <div class="cellTitle">
+            <h4>LED Wall</h4>
+            <h5>Node/IoT</h5>
+          </div>
+        </div>
+        <div id="calc" class="workGridCell">
+          <div class="cellTitle">
+            <h4>Calculator</h4>
+            <h5>React/JavaScript/CSS</h5>
+          </div>
+        </div>
+        <div id="puzzle" class="workGridCell">
+          <div class="cellTitle">
+            <h4>Pastel Puzzles</h4>
+            <h5>MERN Stack</h5>
+          </div>
+        </div>
+        <div id="run" class="workGridCell">
+          <div class="cellTitle">
+            <h4>Run Buddy</h4>
+            <h5>MERN Stack</h5>
+          </div>
+        </div>
+      </section>
     </section>
 
     <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
+    <section class="page-section" id="contact">
+      <h2 id="contact-me" class="col-section-heading">Contact Me</h2>
+      <div id="contact-info" class="col-detailed-info">
+        <p><a href="mywebsite.com">mywebsite.com</a></p>
+        <p><a href="mailto:myemail@gmail.com">myemail@gmail.com</a></p>
+        <p><a href="github.com/mygithub">GitHub</a></p>
+        <p><a href="twitter.com/mytwitter">Twitter</a></p>
+        <p><a href="spotify.com/myspotify">Spotify</a></p>
+      </div>
     </section>
   </main>
 </body>

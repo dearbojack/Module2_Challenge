@@ -9,6 +9,173 @@ body {
   line-height: 1.5;
 }
 
+nav {
+  display: inline;
+  /* padding: 20px; */
+  float: right;
+  padding: 80px;
+}
+
+h1 {
+  display: inline;
+  background-color: white;
+  position: relative;
+  padding-left: 100px;
+  /* padding-top: 100px; */
+  margin-top: 100px;
+}
+
+header {
+  background-color: teal;
+  height: 180px;
+}
+
+.hero-banner {
+  background-image: 
+    linear-gradient( rgba(110, 199, 235, 0.5), rgba(100, 222, 238, 0.5) ),
+    url(../images/02-hero-bg.jpg);
+  height: 400px;
+  background-size: cover;
+}
+
+.hero-banner h2 {
+  display: inline;
+  position: relative;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/* .page-wrapper {
+  display: flex;
+} */
+
+.page-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+[class*='col'] {
+  padding: 1em;
+  border: 1px solid red;
+  width: 80%;
+}
+
+
+/* 
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "about-me personal-intro"
+  "myworks workGrid"
+  "contact-me contact-info";
+  height: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#about-me {
+  grid-area: about-me;
+  background-color: antiquewhite;
+}
+
+#personal-intro {
+  grid-area: personal-intro;
+  background-color: rgb(175, 134, 81);
+}
+
+#myworks {
+  grid-area: myworks;
+  background-color: rgb(97, 185, 141);
+}
+
+#workGrid {
+  grid-area: workGrid;
+  background-color: rgb(92, 149, 214);
+}
+
+#contact-me {
+  grid-area: contact-me;
+  background-color: rgb(226, 104, 165);
+}
+
+#contact-info {
+  grid-area: contact-info;
+  background-color: rgb(226, 104, 165);
+} */
+
+section-heading {
+  display: block;
+  text-align: right;
+  border-right: 3px black;
+}
+
+#workGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "surf surf"
+  "led calc"
+  "puzzle run";
+}
+
+#surf {
+  grid-area: surf;
+  /* background-color: antiquewhite; */
+  background-image: url("../images/02-portfolio-1.jpg");
+  height: 200px;
+  background-size: cover;
+}
+
+#led {
+  grid-area: led;
+  /* background-color: rgb(175, 134, 81); */
+  background-image: url("../images/02-portfolio-2.jpg");
+  /* height: 200px; */
+  background-size: cover;
+}
+
+#calc {
+  grid-area: calc;
+  background-color: rgb(97, 185, 141);
+  background-image: url("../images/02-portfolio-3.jpg");
+  background-size: cover;
+}
+
+#puzzle {
+  grid-area: puzzle;
+  background-color: rgb(92, 149, 214);
+  background-image: url("../images/02-portfolio-4.jpg");
+  background-size: cover;
+}
+
+#run {
+  grid-area: run;
+  background-color: rgb(226, 104, 165);
+  background-image: url("../images/02-run-buddy.jpg");
+  background-size: cover;
+}
+
+.workGridCell {
+  background-image: linear-gradient(rgba(110, 199, 235, 0.5), rgba(100, 222, 238, 0.5));
+  border: 5px red solid;
+  box-sizing: border-box;
+}
+
+.cellTitle {
+  background-color: aquamarine;
+}
+
+#contact-info {
+  display: block;
+  padding-right: 50px;
+}
+
 h1,
 h2,
 h3,

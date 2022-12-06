@@ -46,3 +46,6 @@ Satisfies all of the above acceptance criteria plus the following code improveme
 - Repository contains quality README file with description, screenshot, and link to deployed application.
 
 ## Deployed Application
+
+- Repo: https://github.com/dearbojack/Module2_Challenge
+- Webpage: https://dearbojack.github.io/Module2_Challenge/

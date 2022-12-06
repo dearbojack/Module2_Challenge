@@ -1,3 +1,12 @@
+:root {
+  --main-color: teal;
+
+  --larger: 3em;
+  --large: 2em;
+  --big: 1.5em;
+
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,28 +18,41 @@ body {
   line-height: 1.5;
 }
 
+/* header section */
+
+a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 nav {
-  display: inline;
-  /* padding: 20px; */
-  float: right;
-  padding: 80px;
+  justify-content: space-between;
+  padding-top: 50px;
+  font-size: 1.2em;
+  flex-wrap: wrap;
 }
 
 h1 {
-  display: inline;
   background-color: white;
-  position: relative;
-  padding-left: 100px;
-  /* padding-top: 100px; */
-  margin-top: 100px;
+  text-align: right;
+  color: black;
+  font-size: 3em;
+  width: 500px;
+  border: 50px teal solid;
+  padding-right: 10px;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: teal;
   height: 180px;
 }
 
+/* hero image */
+
 .hero-banner {
+  position: relative;
   background-image: 
     linear-gradient( rgba(110, 199, 235, 0.5), rgba(100, 222, 238, 0.5) ),
     url(../images/02-hero-bg.jpg);
@@ -39,80 +61,44 @@ header {
 }
 
 .hero-banner h2 {
-  display: inline;
-  position: relative;
-  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  font-size: 3em;
   text-align: right;
-  margin-bottom: 20px;
-  background-color: white;
 }
 
-/* .page-wrapper {
-  display: flex;
-} */
+/* main structure with flexbox */
 
-.page-section {
+main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-[class*='col'] {
-  padding: 1em;
-  border: 1px solid red;
-  width: 80%;
-}
-
-
-/* 
-.page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "about-me personal-intro"
-  "myworks workGrid"
-  "contact-me contact-info";
-  height: auto;
+main > h2 {
+  width: 35%;
+  font-size: var(--larger);
+  text-align: right;
   padding-left: 50px;
   padding-right: 50px;
+  border-right: solid 5px black;
 }
 
-#about-me {
-  grid-area: about-me;
-  background-color: antiquewhite;
+
+div {
+  width: 65%;
+  float: left;
 }
 
-#personal-intro {
-  grid-area: personal-intro;
-  background-color: rgb(175, 134, 81);
+main {
+  padding-top: 50px;
 }
 
-#myworks {
-  grid-area: myworks;
-  background-color: rgb(97, 185, 141);
-}
-
-#workGrid {
-  grid-area: workGrid;
-  background-color: rgb(92, 149, 214);
-}
-
-#contact-me {
-  grid-area: contact-me;
-  background-color: rgb(226, 104, 165);
-}
-
-#contact-info {
-  grid-area: contact-info;
-  background-color: rgb(226, 104, 165);
-} */
-
-section-heading {
-  display: block;
-  text-align: right;
-  border-right: 3px black;
-}
+/* works with CSS Grid */
 
 #workGrid {
   display: grid;
@@ -122,58 +108,69 @@ section-heading {
   "surf surf"
   "led calc"
   "puzzle run";
+  padding: 10px;
+  width: auto;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 #surf {
   grid-area: surf;
-  /* background-color: antiquewhite; */
-  background-image: url("../images/02-portfolio-1.jpg");
-  height: 200px;
-  background-size: cover;
+  background-image: url("../images/02-portfolio-4.jpg");
+  height: 250px;
+  width: 100%;
+  background-size:cover;
 }
 
 #led {
   grid-area: led;
-  /* background-color: rgb(175, 134, 81); */
-  background-image: url("../images/02-portfolio-2.jpg");
-  /* height: 200px; */
+  background-image: url("../images/02-portfolio-1.jpg");
+  width: 100%;
   background-size: cover;
 }
 
 #calc {
   grid-area: calc;
-  background-color: rgb(97, 185, 141);
-  background-image: url("../images/02-portfolio-3.jpg");
+  background-image: url("../images/02-portfolio-2.jpg");
+  width: 100%;
   background-size: cover;
 }
 
 #puzzle {
   grid-area: puzzle;
-  background-color: rgb(92, 149, 214);
-  background-image: url("../images/02-portfolio-4.jpg");
+  background-image: url("../images/02-portfolio-3.jpg");
+  width: 100%;
   background-size: cover;
 }
 
 #run {
   grid-area: run;
-  background-color: rgb(226, 104, 165);
   background-image: url("../images/02-run-buddy.jpg");
+  width: 100%;
   background-size: cover;
 }
 
 .workGridCell {
   background-image: linear-gradient(rgba(110, 199, 235, 0.5), rgba(100, 222, 238, 0.5));
-  border: 5px red solid;
-  box-sizing: border-box;
+  border: 5px aquamarine solid;
+}
+
+.workGridCell:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
 }
 
 .cellTitle {
   background-color: aquamarine;
+  position: relative;
+  width: 200px;
+  top: 50px;
+  padding: 10px;
 }
 
-#contact-info {
-  display: block;
-  padding-right: 50px;
+.cellTitle h4 {
+  font-size: 1.5em;
 }
 
 h1,
@@ -187,4 +184,11 @@ h6 {
 
 p {
   margin: 0;
+  padding: 20px;
 }
+
+/* footer > p {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+} */
